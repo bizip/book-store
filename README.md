@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math magicians
+# Book strore
 
-> "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to: Make simple calculations. Read a random math-related
+> It is called bookstore and it is going to display a lisk of books from store and a user will be able to add new book and even choose its corresponding category. Build with (React/Redux)
 
 ## Built With
 
