@@ -1,11 +1,12 @@
 import './App.css';
+import NavBar from './Components/layouts/Navbar';
+import BookStoreRoutes from './routes/BookStoreRoutes';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Book strore</h1>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <NavBar />
+    <BookStoreRoutes />
+  </div>
+);
 
 export default App;
