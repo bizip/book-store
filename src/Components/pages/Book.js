@@ -20,19 +20,21 @@ const defaultProps = {};
 /**
  *
  */
-const Book = () => {
-  return <li><div>
+const Book = () => (
+  <li>
     <div>
-      <p>Action</p>
-      <h1>Bizimungu Pascal</h1>
       <div>
-        <button type='button'>Comments</button>
-        <button type='button'>Remove</button>
-        <button type='button'>Edit</button>
+        <p>Action</p>
+        <h1>Bizimungu Pascal</h1>
+        <div>
+          <button type="button">Comments</button>
+          <button type="button">Remove</button>
+          <button type="button">Edit</button>
+        </div>
       </div>
     </div>
-  </div></li>
-}
+  </li>
+);
 
 Book.propTypes = propTypes;
 Book.defaultProps = defaultProps;
