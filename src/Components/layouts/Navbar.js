@@ -1,30 +1,20 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import classes from '../../Styles.module.css';
 
-// #region constants
-
-// #endregion
-
-// #region styled-components
-
-// #endregion
-
-// #region functions
-
-// #endregion
-
-// #region component
 const propTypes = {};
 
 const defaultProps = {};
 
-/**
- *
- */
 const NavBar = () => (
-  <div>
-    <h1>this is the NavBar</h1>
-  </div>
+  <nav className={classes.navbar}>
+    <ul>
+      <li><NavLink to="/"><h1>Bookstore CMS</h1></NavLink></li>
+      <li><NavLink to="/book">Books</NavLink></li>
+      <li><NavLink to="/category">Categories</NavLink></li>
+    </ul>
+
+  </nav>
 );
 
 NavBar.propTypes = propTypes;

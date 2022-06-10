@@ -1,0 +1,17 @@
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 2rem;
+    align-items: center;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-left: 2rem;
+}
+
+.active {
+    background-color: orangered;
+}
