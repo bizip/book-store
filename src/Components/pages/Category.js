@@ -6,7 +6,7 @@ const defaultProps = {};
 
 const Category = () => (
   <div>
-    <h1>Display Category Page</h1>
+    <button type="button">Check status</button>
   </div>
 );
 
