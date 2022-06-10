@@ -15,3 +15,9 @@
 .active {
     background-color: orangered;
 }
+
+.booklist {
+    list-style: none;
+    padding: 2rem;
+    font-size: 1.5rem;
+}

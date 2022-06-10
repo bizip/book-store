@@ -1,43 +1,30 @@
 import React from 'react';
+import classes from '../../Styles.module.css';
 
-// #region constants
-
-// #endregion
-
-// #region styled-components
-
-// #endregion
-
-// #region functions
-
-// #endregion
-
-// #region component
 const propTypes = {};
 
 const defaultProps = {};
 
-/**
- *
- */
-const Book = () => (
-  <li>
-    <div>
+const Book = (props) => (
+  props.data.map((item) => (
+    <li key={item.id} className={classes.booklist}>
       <div>
-        <p>Action</p>
-        <h1>Bizimungu Pascal</h1>
         <div>
-          <button type="button">Comments</button>
-          <button type="button">Remove</button>
-          <button type="button">Edit</button>
+          <p>{item.category}</p>
+          <h1>{item.Author}</h1>
+          <div>
+            <button type="button">Comments</button>
+            <button type="button">Remove</button>
+            <button type="button">Edit</button>
+          </div>
         </div>
       </div>
-    </div>
-  </li>
+    </li>
+  ))
+
 );
 
 Book.propTypes = propTypes;
 Book.defaultProps = defaultProps;
-// #endregion
 
 export default Book;

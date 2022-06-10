@@ -1,18 +1,7 @@
 import React from 'react';
+import { data } from '../../boooks-data/Data';
+import Book from './Book';
 
-// #region constants
-
-// #endregion
-
-// #region styled-components
-
-// #endregion
-
-// #region functions
-
-// #endregion
-
-// #region component
 const propTypes = {};
 
 const defaultProps = {};
@@ -22,7 +11,7 @@ const defaultProps = {};
  */
 const Home = () => (
   <div>
-    <h1>Display lists of all books</h1>
+    <Book data={data} />
   </div>
 );
 
