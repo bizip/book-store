@@ -19,6 +19,12 @@ const NewBookForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(add(data));
+    setData({
+      title: '',
+      author: '',
+      id: '',
+      category: 'action',
+    });
   };
   const handleChange = (e) => {
     const { name } = e.target;

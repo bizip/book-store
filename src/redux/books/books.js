@@ -9,8 +9,8 @@ export const BookSlice = createSlice({
     add: (state, action) => {
       state.books.push(action.payload);
     },
-    remove: () => {
-      console.log('a book is removed from the list');
+    remove: (state, action) => {
+      const { bookList, id } = action.payload;
     },
   },
 });
