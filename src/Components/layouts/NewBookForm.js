@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import classes from '../../Styles.module.css';
 import { add } from '../../redux/books/books';
@@ -13,9 +13,9 @@ const NewBookForm = () => {
     title: '',
     author: '',
     id: '',
+    category: 'action',
   });
   const dispatch = useDispatch();
-  const newBBok = useSelector((state) => state.books);
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(add(data));

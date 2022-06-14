@@ -1,6 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import classes from '../../Styles.module.css';
-import { useSelector, useDispatch } from 'react-redux';
 
 const propTypes = {};
 
@@ -23,8 +23,7 @@ const Book = () => {
         </div>
       </div>
     </li>
-  ))
-
+  ));
 };
 
 Book.propTypes = propTypes;

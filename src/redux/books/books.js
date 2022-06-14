@@ -7,7 +7,7 @@ export const BookSlice = createSlice({
   },
   reducers: {
     add: (state, action) => {
-     state.books.push(action.payload);
+      state.books.push(action.payload);
     },
     remove: () => {
       console.log('a book is removed from the list');
