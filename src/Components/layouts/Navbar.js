@@ -9,8 +9,8 @@ const defaultProps = {};
 const NavBar = () => (
   <nav className={classes.navbar}>
     <ul>
-      <li><NavLink activeClassName="active" to="/"><h1>Bookstore CMS</h1></NavLink></li>
-      <li><NavLink activeClassName="active" to="/category">Categories</NavLink></li>
+      <li><NavLink className={(navData) => (navData.isActive ? 'active' : 'none')} to="/"><h1>Bookstore CMS</h1></NavLink></li>
+      <li><NavLink to="/category">Categories</NavLink></li>
     </ul>
 
   </nav>

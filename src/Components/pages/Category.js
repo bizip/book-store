@@ -1,14 +1,22 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { add } from '../../redux/books/books';
 
 const propTypes = {};
 
 const defaultProps = {};
 
-const Category = () => (
-  <div>
-    <button type="button">Check status</button>
-  </div>
-);
+const Category = () => {
+  const dispatch = useDispatch();
+  const handleTestRedux = () => {
+    dispatch(add());
+  };
+  return (
+    <div>
+      <button type="button" onClick={handleTestRedux}>Check status</button>
+    </div>
+  );
+};
 
 Category.propTypes = propTypes;
 Category.defaultProps = defaultProps;
