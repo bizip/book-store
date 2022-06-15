@@ -9,7 +9,7 @@ const defaultProps = {};
 const Category = () => {
   const dispatch = useDispatch();
   const handleTestRedux = () => {
-    dispatch(add());
+    // dispatch(add());
   };
   return (
     <div>

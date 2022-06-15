@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import classes from '../../Styles.module.css';
-import { add } from '../../redux/books/books';
+import { add, addnewBookFunction } from '../../redux/books/books';
 
 const propTypes = {};
 
@@ -18,7 +18,7 @@ const NewBookForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(add(data));
+    dispatch(addnewBookFunction(data));
     setData({
       title: '',
       author: '',
