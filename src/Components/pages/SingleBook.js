@@ -7,16 +7,12 @@ const propTypes = {};
 
 const defaultProps = {};
 
-/**
- *
- */
 const SingleBook = (props) => {
   const dispatch = useDispatch();
   const { bookList } = props;
   const handleDelete = (e) => {
     const { id } = e.target;
     dispatch(removeBookFunction(id));
-    console.log(props.bookList);
   };
   return (
     bookList.map((item, index = -1) => (

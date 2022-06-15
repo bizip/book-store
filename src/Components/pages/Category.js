@@ -6,7 +6,6 @@ const defaultProps = {};
 
 const Category = () => {
   const handleTestRedux = () => {
-    // dispatch(add());
   };
   return (
     <div>
