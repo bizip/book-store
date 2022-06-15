@@ -3,25 +3,25 @@ export const data = [
   {
     id: 1,
     category: 'Action',
-    Author: 'Bizimungu Pascal',
+    author: 'Bizimungu Pascal',
 
   },
   {
     id: 2,
     category: 'Science',
-    Author: 'Bizimungu Issa',
+    author: 'Bizimungu Issa',
 
   },
   {
     id: 3,
     category: 'Social',
-    Author: 'Adma smith',
+    author: 'Adma smith',
 
   },
   {
     id: 4,
     category: 'Technilogy',
-    Author: 'Blaise Pascal',
+    author: 'Blaise Pascal',
 
   },
 ];

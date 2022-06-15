@@ -4,11 +4,15 @@ const propTypes = {};
 
 const defaultProps = {};
 
-const Category = () => (
-  <div>
-    <button type="button">Check status</button>
-  </div>
-);
+const Category = () => {
+  const handleTestRedux = () => {
+  };
+  return (
+    <div>
+      <button type="button" onClick={handleTestRedux}>Check status</button>
+    </div>
+  );
+};
 
 Category.propTypes = propTypes;
 Category.defaultProps = defaultProps;
