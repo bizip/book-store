@@ -1,27 +1,26 @@
+/* eslint-disable import/prefer-default-export */
 // eslint-disable-next-line import/prefer-default-export
+import { v4 as uuidv4 } from 'uuid';
+
 export const data = [
   {
-    id: 1,
+    id: uuidv4(),
     category: 'Action',
     author: 'Bizimungu Pascal',
-
   },
   {
-    id: 2,
+    id: uuidv4(),
     category: 'Science',
     author: 'Bizimungu Issa',
-
   },
   {
-    id: 3,
+    id: uuidv4(),
     category: 'Social',
     author: 'Adma smith',
-
   },
   {
-    id: 4,
+    id: uuidv4(),
     category: 'Technilogy',
     author: 'Blaise Pascal',
-
   },
 ];
