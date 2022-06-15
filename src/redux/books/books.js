@@ -1,22 +1,22 @@
 // Actions
-const ADD = 'add';
-const REMOVE = 'Remove';
-const DISPLAY = 'display';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // action creator
-export const addnewBookFunction = (data) => (dispatch) => dispatch({ type: ADD, payload: data });
-export const removeBookFunction = (id) => (dispatch) => dispatch({ type: REMOVE, payload: id });
-export const displayBookFunction = () => (dispatch) => dispatch({ type: DISPLAY });
+export const addnewBookFunction = (data) => (dispatch) => dispatch({
+  type: ADD_BOOK, payload: data,
+});
+export const removeBookFunction = (id) => (dispatch) => dispatch({
+  type: REMOVE_BOOK, payload: id,
+});
 
 // reducer function
 const bookReducer = (state = [], action) => {
   switch (action.type) {
-    case ADD:
+    case ADD_BOOK:
       return [...state, action.payload];
-    case REMOVE:
+    case REMOVE_BOOK:
       return [...state, state.filter((book) => book.id !== action.payload.id)];
-    case DISPLAY:
-      return [action.payload];
     default:
       return state;
   }

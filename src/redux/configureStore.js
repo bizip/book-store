@@ -3,9 +3,9 @@ import bookReducer from './books/books';
 import categoryReducer from './categories/categories';
 
 const allReducer = combineReducers({
-  bookReducer,
+  bookReducer, categoryReducer,
 });
 const store = configureStore({
-  reducer: allReducer, categoryReducer,
+  reducer: allReducer,
 });
 export default store;
