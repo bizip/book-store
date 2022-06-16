@@ -9,7 +9,10 @@ export const addNewCtegoryFunction = (data) => (dispatch) => {
 const categoryReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_CATEGORY:
-      return 'Under construction';
+      return {
+        ...state,
+        text: 'Under construction',
+      };
     default:
       return state;
   }
