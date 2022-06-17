@@ -1,5 +1,6 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { displayBookFunction } from '../../redux/books/books';
 
 import SingleBook from './SingleBook';
 
@@ -8,9 +9,15 @@ const propTypes = {};
 const defaultProps = {};
 
 const Book = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(displayBookFunction());
+  }, []);
   const bookList = useSelector((state) => state.bookReducer);
-  return bookList.map((item) => (
-    <SingleBook key={item.id} item={item} />
+
+  return bookList.map((item, index) => (
+    // eslint-disable-next-line react/no-array-index-key
+    <SingleBook key={index} item={item} />
   ));
 };
 

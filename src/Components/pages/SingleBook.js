@@ -11,8 +11,9 @@ const defaultProps = {};
 const SingleBook = (props) => {
   const dispatch = useDispatch();
   const { item } = props;
-  const handleDelete = (e) => {
-    const { id } = e.target;
+  const handleDelete = () => {
+    const { id } = item;
+
     dispatch(removeBookFunction(id));
   };
   return (
@@ -25,7 +26,7 @@ const SingleBook = (props) => {
           <h3>{item.author}</h3>
           <div>
             <button type="button">Comments</button>
-            <button type="button" id={item.id} onClick={handleDelete}>Remove</button>
+            <button type="button" onClick={handleDelete}>Remove</button>
             <button type="button">Edit</button>
           </div>
         </div>

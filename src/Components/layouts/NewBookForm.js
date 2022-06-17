@@ -10,9 +10,9 @@ const defaultProps = {};
 
 const NewBookForm = () => {
   const [data, setData] = useState({
+    item_id: '',
     title: '',
     author: '',
-    id: '',
     category: 'action',
   });
   const dispatch = useDispatch();
@@ -20,10 +20,10 @@ const NewBookForm = () => {
     e.preventDefault();
     dispatch(addnewBookFunction(data));
     setData({
+      item_id: '',
       title: '',
       author: '',
-      id: '',
-      category: 'action',
+      category: 'fiction',
     });
   };
   const handleChange = (e) => {
@@ -31,7 +31,7 @@ const NewBookForm = () => {
     setData({
       ...data,
       [name]: e.target.value,
-      id: uuidv4(),
+      item_id: uuidv4(),
     });
   };
   return (
