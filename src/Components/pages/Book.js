@@ -9,7 +9,9 @@ const defaultProps = {};
 
 const Book = () => {
   const bookList = useSelector((state) => state.bookReducer);
-  return <SingleBook bookList={bookList} />;
+  return bookList.map((item) => (
+    <SingleBook key={item.id} item={item} />
+  ));
 };
 
 Book.propTypes = propTypes;
