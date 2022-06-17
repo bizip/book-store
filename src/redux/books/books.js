@@ -8,6 +8,8 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const DISPLAY_BOOK = 'bookstore/books/DISPLAY_BOOK';
 
 // action creator
+
+// Action creator function that will display data once it is dispatched
 export const displayBookFunction = () => async (dispatch) => {
   try {
     const response = await axios.get(url);
@@ -17,6 +19,7 @@ export const displayBookFunction = () => async (dispatch) => {
   }
 };
 
+// Action creator function that will add data once it is dispatched
 export const addnewBookFunction = (data) => async (dispatch) => {
   try {
     await axios.post(url, data);
@@ -25,6 +28,8 @@ export const addnewBookFunction = (data) => async (dispatch) => {
     return err;
   }
 };
+
+// Action creator function that will delete data once it is dispatched
 export const removeBookFunction = (id) => async (dispatch) => {
   const deleteUrl = `${url}/${id}`;
   try {
@@ -43,6 +48,7 @@ export const removeBookFunction = (id) => async (dispatch) => {
 const bookReducer = (state = data, action) => {
   switch (action.type) {
     case DISPLAY_BOOK:
+      // return the converted array from the object
       return Object.keys(action.payload)
         .map((el) => ({ ...action.payload[el][0], id: el }));
     case ADD_BOOK:

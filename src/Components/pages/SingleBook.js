@@ -6,8 +6,6 @@ import classes from '../../Styles.module.css';
 
 const propTypes = {};
 
-const defaultProps = {};
-
 const SingleBook = (props) => {
   const dispatch = useDispatch();
   const { item } = props;
@@ -36,7 +34,6 @@ const SingleBook = (props) => {
 };
 
 SingleBook.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   item: PropTypes.shape({
     author: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
@@ -46,7 +43,13 @@ SingleBook.propTypes = {
 };
 
 SingleBook.propTypes = propTypes;
-SingleBook.defaultProps = defaultProps;
-// #endregion
+SingleBook.defaultProps = {
+  item: PropTypes.shape({
+    author: '',
+    id: '',
+    title: '',
+    category: '',
+  }),
+};
 
 export default SingleBook;

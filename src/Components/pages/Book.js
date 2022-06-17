@@ -15,9 +15,8 @@ const Book = () => {
   }, []);
   const bookList = useSelector((state) => state.bookReducer);
 
-  return bookList.map((item, index) => (
-    // eslint-disable-next-line react/no-array-index-key
-    <SingleBook key={index} item={item} />
+  return bookList.map((item) => (
+    <SingleBook key={item.id} item={item} />
   ));
 };
 
