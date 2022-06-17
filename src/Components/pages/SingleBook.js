@@ -6,13 +6,12 @@ import classes from '../../Styles.module.css';
 
 const propTypes = {};
 
-const defaultProps = {};
-
 const SingleBook = (props) => {
   const dispatch = useDispatch();
   const { item } = props;
-  const handleDelete = (e) => {
-    const { id } = e.target;
+  const handleDelete = () => {
+    const { id } = item;
+
     dispatch(removeBookFunction(id));
   };
   return (
@@ -25,7 +24,7 @@ const SingleBook = (props) => {
           <h3>{item.author}</h3>
           <div>
             <button type="button">Comments</button>
-            <button type="button" id={item.id} onClick={handleDelete}>Remove</button>
+            <button type="button" onClick={handleDelete}>Remove</button>
             <button type="button">Edit</button>
           </div>
         </div>
@@ -35,7 +34,6 @@ const SingleBook = (props) => {
 };
 
 SingleBook.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   item: PropTypes.shape({
     author: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
@@ -45,7 +43,13 @@ SingleBook.propTypes = {
 };
 
 SingleBook.propTypes = propTypes;
-SingleBook.defaultProps = defaultProps;
-// #endregion
+SingleBook.defaultProps = {
+  item: PropTypes.shape({
+    author: '',
+    id: '',
+    title: '',
+    category: '',
+  }),
+};
 
 export default SingleBook;
