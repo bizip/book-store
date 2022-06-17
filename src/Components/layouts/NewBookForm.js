@@ -36,15 +36,11 @@ const NewBookForm = () => {
   };
   return (
     <div>
-      <h1>Add New Book</h1>
+      <h1 className={classes.formHeader}>Add New Book</h1>
       <form className={classes.newbookform} onSubmit={handleSubmit}>
         <input type="text" value={data.title} name="title" onChange={handleChange} placeholder="Book title" />
-        <br />
-        <br />
         <input type="text" value={data.author} onChange={handleChange} name="author" placeholder="Author" />
-        <br />
-        <br />
-        <button type="submit">Submit</button>
+        <button type="submit" className={classes.formbtn}>Submit</button>
       </form>
     </div>
   );
