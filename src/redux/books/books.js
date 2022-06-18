@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { data } from '../../boooks-data/Data';
 
 const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/juRlPBqKi1o6i8tmwxbv/books';
 // Actions
@@ -45,7 +44,7 @@ export const removeBookFunction = (id) => async (dispatch) => {
 };
 
 // reducer function
-const bookReducer = (state = data, action) => {
+const bookReducer = (state = [], action) => {
   switch (action.type) {
     case DISPLAY_BOOK:
       // return the converted array from the object
